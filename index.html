@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sarathy | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #fff, #ffe3c2);
+      color: #222;
+    }
+
+    nav {
+      background: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #000;
+    }
+
+    .logo span {
+      color: #6d4300;
+      text-shadow: 0 0 8px #6d4300;
+    }
+
+    nav .links a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      position: relative;
+    }
+
+    nav .links a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #6d4300;
+      left: 0;
+      bottom: -3px;
+      transition: 0.3s;
+    }
+
+    nav .links a:hover::after {
+      width: 100%;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 4rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .intro {
+      max-width: 600px;
+    }
+
+    .intro h1 {
+      font-size: 2.8rem;
+    }
+
+    .intro h1 span {
+      color: #6d4300;
+      text-shadow: 0 0 10px #6d4300;
+    }
+
+    .typewriter span::before {
+      content: "Developer";
+      animation: words 10s infinite;
+    }
+
+    .typewriter span::after {
+      content: "|";
+      animation: blink 0.7s infinite;
+      margin-left: 5px;
+      color: #6d4300;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @keyframes words {
+      0%, 33% { content: "Developer"; }
+      34%, 66% { content: "Designer"; }
+      67%, 100% { content: "Data Scientist"; }
+    }
+
+    .social-links a {
+      margin: 1rem 0.5rem;
+      display: inline-block;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: transparent;
+      border: 2px solid #6d4300;
+      color: #6d4300;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      background: #6d4300;
+      color: #fff;
+    }
+
+    .intro-img {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .intro-img img {
+      width: 320px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #6d4300;
+    }
+
+    .about p {
+      max-width: 800px;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .skills ul {
+      max-width: 800px;
+      list-style-type: square;
+      padding-left: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .portfolio-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 300px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h3 {
+      color: #6d4300;
+      margin-bottom: 0.5rem;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #6d4300;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f3f3f3;
+      color: #444;
+    }
+
+    @media (max-width: 768px) {
+      nav .links {
+        display: none;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .portfolio-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Sarathy's <span>Profile</span></div>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="intro">
+      <h1>Hello, I'm <span>Sarathy</span></h1>
+      <div class="typewriter">I'm a <span></span></div>
+      <p>Integrated M.Tech in CSE (Data Science) | Passionate about AI, design, and full-stack development.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/sarathy-p-068b0128a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/_itz_sarathy_15" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="intro-img">
+      <img src="C:\Users\Madava\Pictures\Saved Pictures\IMG-20250626-WA0275.jpg" alt="Profile Image" />
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I’m a curious and self-driven computer science student with a specialization in Data Science. I love to learn new technologies and apply them to real-world challenges.</p>
+    <p>My interests span across Machine Learning, AI-driven applications, UI/UX design, and web development. I have worked on several academic and personal projects that involve full-stack development, recommendation systems, and automation tools.</p>
+    <p>I'm an active GitHub user and enjoy collaborating in hackathons and open-source contributions. I also enjoy designing beautiful and user-friendly interfaces using Figma and Adobe XD.</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Programming Languages:</strong> Python, Java, C++, JavaScript</li>
+      <li><strong>Frontend:</strong> HTML5, CSS3, React.js, Bootstrap, Tailwind</li>
+      <li><strong>Backend:</strong> Node.js, Express.js, Django, Flask</li>
+      <li><strong>Databases:</strong> MySQL, MongoDB, Firebase</li>
+      <li><strong>Tools & Platforms:</strong> Git, GitHub, VS Code, Postman, Figma, Netlify, Render</li>
+      <li><strong>Data Science Libraries:</strong> NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn</li>
+    </ul>
+    <br/>
+    <h2>Languages Known</h2>
+    <ul>
+      <li>Tamil (Native)</li>
+      <li>English (Professional)</li>
+      <li>Hindi (Intermediate)</li>
+    </ul>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-cards">
+      <div class="card">
+        <h3>Music Recommendation System</h3>
+        <p>Collaborative filtering model that recommends songs based on user preferences and behavior.</p>
+        <a href="#">View Project →</a>
+      </div>
+      <div class="card">
+        <h3>Tourist Guide App</h3>
+        <p>Helps users explore new places, create itineraries, and get nearby suggestions using real-time APIs.</p>
+        <a href="#">View Project →</a>
+      </div>
+      <div class="card">
+        <h3>AI Chatbot</h3>
+        <p>A simple customer support bot that answers queries using NLP techniques and Flask backend.</p>
+        <a href="#">View Project →</a>
+      </div>
+      <div class="card">
+        <h3>Student Dashboard</h3>
+        <p>A MERN stack dashboard that allows students to track academic progress, assignments, and performance.</p>
+        <a href="#">View Project →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: sarathy.p2023@vitstudent.ac.in</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sarathy-p-068b0128a" target="_blank">linkedin.com/in/sarathy-p</a></p>
+    <p>GitHub: <a href="https://github.com/" target="_blank">github.com/your-github</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/_itz_sarathy_15" target="_blank">instagram.com/_itz_sarathy_15</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Sarathy. All rights reserved.
+  </footer>
+
+</body>
+</html>
